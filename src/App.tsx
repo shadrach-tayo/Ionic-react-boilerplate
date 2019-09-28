@@ -4,10 +4,10 @@ import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { AppPage } from './declarations';
 
-import Menu from './components/Menu';
+import Menu from './components/Menu/Menu';
 import Home from './pages/Home';
 import List from './pages/List';
-import { home, list } from 'ionicons/icons';
+import { home, list, contact, wallet, settings, logOut, menu, mailOpen, book, checkmarkCircle } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,9 +30,54 @@ import './theme/variables.css';
 
 const appPages: AppPage[] = [
   {
-    title: 'Home',
+    title: 'Contacts',
+    url: '/home',
+    icon: contact
+  },
+  {
+    title: 'Connections',
     url: '/home',
     icon: home
+  },
+  {
+    title: 'Targeted BBM',
+    url: '/home',
+    icon: home
+  },
+  {
+    title: 'Invite Friend',
+    url: '/home',
+    icon: mailOpen
+  },
+  {
+    title: 'Business News',
+    url: '/home',
+    icon: book
+  },
+  {
+    title: 'Go Premium',
+    url: '/home',
+    icon: checkmarkCircle
+  },
+  {
+    title: 'Mywallet',
+    url: '/home',
+    icon: wallet
+  },
+  {
+    title: 'Categories',
+    url: '/home',
+    icon: menu
+  },
+  {
+    title: 'settings',
+    url: '/home',
+    icon: settings
+  },
+  {
+    title: 'logout',
+    url: '/home',
+    icon: logOut
   },
   {
     title: 'List',
