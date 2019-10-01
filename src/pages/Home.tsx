@@ -15,26 +15,32 @@ import {
   IonMenuButton,
   IonPage,
   IonTitle,
-  IonToolbar
-  } from '@ionic/react';
-import { book, build, colorFill, grid } from 'ionicons/icons';
+  IonToolbar,
+  IonButton
+} from '@ionic/react';
+import { book, build, colorFill, grid, more } from 'ionicons/icons';
 import React from 'react';
 import './Home.css';
 
 const HomePage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
+      <IonHeader class="app-header">
+        <IonToolbar class="app-toolbar">
           <IonButtons slot="start">
-            <IonMenuButton />
+            <IonMenuButton color="light" />
           </IonButtons>
-          <IonTitle>Home</IonTitle>
+          <IonTitle color="light">Homes</IonTitle>
+          <IonButtons slot="end">
+            <IonButton>
+              <IonIcon name="more" color="medium" icon={more} />
+            </IonButton>
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonCard className="welcome-card">
-          <img src="/assets/shapes.svg" alt=""/>
+          <img src="/assets/shapes.svg" alt="" />
           <IonCardHeader>
             <IonCardSubtitle>Get Started</IonCardSubtitle>
             <IonCardTitle>Welcome to Ionic</IonCardTitle>

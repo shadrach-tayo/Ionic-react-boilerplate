@@ -4,7 +4,7 @@ import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { AppPage } from '../declarations';
 
-import Menu from './Menu/Menu';
+import Menu from './SideMenu/Menu';
 import Home from '../pages/Home';
 import List from '../pages/List';
 import { home, list } from 'ionicons/icons';
