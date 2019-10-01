@@ -5,7 +5,10 @@
 
 .app-toolbar {
   --background: var(--ion-color-primary);
+  text-align: center;
+  box-shadow: none;
 }
 
 .app-header {
+  box-shadow: none;
 }

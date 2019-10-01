@@ -16,11 +16,18 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonButton
+  IonButton,
+  IonFab,
+  IonFabButton,
+  IonFabList
 } from '@ionic/react';
-import { book, build, colorFill, grid, more } from 'ionicons/icons';
+import { book, build, colorFill, grid, more, add } from 'ionicons/icons';
 import React from 'react';
 import './Home.css';
+
+function fabButtonClicked(e: any) {
+  console.log('fab button clicked')
+}
 
 const HomePage: React.FC = () => {
   return (
@@ -33,7 +40,7 @@ const HomePage: React.FC = () => {
           <IonTitle color="light">Homes</IonTitle>
           <IonButtons slot="end">
             <IonButton>
-              <IonIcon name="more" color="medium" icon={more} />
+              <IonIcon icon={more} color="light" />
             </IonButton>
           </IonButtons>
         </IonToolbar>
@@ -74,6 +81,23 @@ const HomePage: React.FC = () => {
             <IonLabel>Theme Your App</IonLabel>
           </IonItem>
         </IonList>
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
+          <IonFabButton onClick={fabButtonClicked}>
+            <IonIcon color="light" icon={add} />
+            <IonFabList side="top">
+              <IonFabButton><IonIcon name="logo-vimeo" /></IonFabButton>
+            </IonFabList>
+            <IonFabList side="bottom">
+              <IonFabButton><IonIcon name="logo-facebook" /></IonFabButton>
+            </IonFabList>
+            <IonFabList side="start">
+              <IonFabButton><IonIcon name="logo-instagram" /></IonFabButton>
+            </IonFabList>
+            <IonFabList side="end">
+              <IonFabButton><IonIcon name="logo-twitter" /></IonFabButton>
+            </IonFabList>
+          </IonFabButton>
+        </IonFab>
       </IonContent>
     </IonPage>
   );
